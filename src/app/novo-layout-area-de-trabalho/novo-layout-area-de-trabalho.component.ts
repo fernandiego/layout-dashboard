@@ -8,7 +8,7 @@ import {Component} from '@angular/core';
 export class NovoLayoutAreaDeTrabalhoComponent {
 
   iconLeftRight = "pi pi-angle-right"
-  classeLateral = "lateral-compacto"
+  classeLateral = "lateral-expandido"
 
   expandeOuComprime() {
     if (this.classeLateral === 'lateral-expandido') {

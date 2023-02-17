@@ -1,4 +1,4 @@
-.miolo, .lateral-compacto, .centro, .topo, .conteudo {
+.miolo, .lateral-compacto, .lateral-expandido, .centro, .topo, .conteudo {
   border: 1px solid red; /* debug */
   background-color: lightblue;
   opacity: 0.8;
@@ -16,22 +16,27 @@
   align-items: center;
 }
 
-.lateral-compacto{
+.lateral-compacto {
   min-width: 3em;
 }
 
 .lateral-expandido {
-  flex-grow: 6;
+  flex-grow: 4;
 }
 
 .centro {
-  flex-grow: 12;
+  flex-grow: 20;
   display: flex;
   flex-direction: column;
 }
 
 .topo {
   min-height: 3em;
+
+}
+
+.menu-compacto {
+  display: none;
 }
 
 .conteudo {
@@ -50,7 +55,7 @@
 
   button {
     margin: 1em;
-    width:20px !important;
+    width: 20px !important;
     height: 20px;
   }
 }
@@ -70,17 +75,38 @@
 
 @media (min-width: 1280px) {
   .miolo {
-    margin-left: 5em;
-    margin-right: 5em;
+    margin-left: 2em;
+    margin-right: 2em;
   }
 }
 
 @media (max-width: 1024px) {
+  .lateral-expandido {
+    position: absolute;
+    top:0;
+    left:0;
+    width:40vw;
+    height:95vh;
+    z-index: 99999999;
+  }
 }
 
 @media (max-width: 800px) {
-  .lateral-compacto{
+  .lateral-compacto {
     display: none;
+  }
+
+  .lateral-expandido {
+    position: absolute;
+    top:0;
+    left:0;
+    width:70vw;
+    height:100vh;
+    z-index: 99999999;
+  }
+
+  .menu-compacto {
+    display: block;
   }
 
 }
