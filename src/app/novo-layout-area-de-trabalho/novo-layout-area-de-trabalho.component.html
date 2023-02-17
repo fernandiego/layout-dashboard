@@ -1,12 +1,12 @@
 <div class="miolo">
-  <div #lateral class="lateral">
+  <div [class]="classeLateral">
     <a href="/home">
       <!--      <img src="/assets/images/logo_kanoe_curta.png" alt="logo"/>-->
     </a>
     <!-- logo -->
     <!-- botão compactar/expandir -->
-    <button pButton pRipple type="button" icon="pi pi-angle-right" class="p-button-xs p-button-secondary"
-            (click)="expandeOuComprime(lateral)"></button>
+    <button pButton pRipple type="button" [icon]="iconLeftRight" class="p-button-xs p-button-secondary"
+            (click)="expandeOuComprime()"></button>
     <!-- area de trabalho árvore -->
   </div>
   <div class="centro">

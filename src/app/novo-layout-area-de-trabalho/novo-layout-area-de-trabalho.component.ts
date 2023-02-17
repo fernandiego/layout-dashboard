@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-novo-layout-area-de-trabalho',
@@ -7,9 +7,16 @@ import { Component } from '@angular/core';
 })
 export class NovoLayoutAreaDeTrabalhoComponent {
 
+  iconLeftRight = "pi pi-angle-right"
+  classeLateral = "lateral-compacto"
 
-  expandeOuComprime(divLateral: HTMLDivElement) {
-    if (divLateral.className === 'lateral-expandido') divLateral.className = 'lateral';
-    else  divLateral.className = 'lateral-expandido';
+  expandeOuComprime() {
+    if (this.classeLateral === 'lateral-expandido') {
+      this.classeLateral = 'lateral-compacto';
+      this.iconLeftRight = "pi pi-angle-right"
+    } else {
+      this.classeLateral = 'lateral-expandido';
+      this.iconLeftRight = "pi pi-angle-left"
+    }
   }
 }
