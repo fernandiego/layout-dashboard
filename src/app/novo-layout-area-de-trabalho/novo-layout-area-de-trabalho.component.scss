@@ -1,5 +1,7 @@
-.miolo, .lateral, .centro, .topo, .conteudo {
+.miolo, .lateral-compacto, .centro, .topo, .conteudo {
   border: 1px solid red; /* debug */
+  background-color: lightblue;
+  opacity: 0.8;
 }
 
 .miolo {
@@ -7,12 +9,15 @@
   min-height: 95vh;
 }
 
-.lateral, .lateral-expandido {
-  flex-grow: 2;
+.lateral-compacto, .lateral-expandido {
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
+}
+
+.lateral-compacto{
+  min-width: 3em;
 }
 
 .lateral-expandido {
@@ -20,7 +25,7 @@
 }
 
 .centro {
-  flex-grow: 10;
+  flex-grow: 12;
   display: flex;
   flex-direction: column;
 }
@@ -33,7 +38,7 @@
   flex-grow: 1;
 }
 
-.lateral, .lateral-expandido {
+.lateral-compacto, .lateral-expandido {
   a {
     margin: 1em;
     max-width: 100%;
@@ -61,9 +66,6 @@
     margin-left: 20%;
     margin-right: 20%;
   }
-  .lateral {
-    flex-grow: 4;
-  }
 }
 
 @media (min-width: 1280px) {
@@ -71,23 +73,14 @@
     margin-left: 5em;
     margin-right: 5em;
   }
-  .lateral {
-    flex-grow: 3;
-  }
 }
 
 @media (max-width: 1024px) {
-  .lateral {
-    max-width: 6em;
-  }
 }
 
 @media (max-width: 800px) {
-  .lateral {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 40vw;
-    min-height: 100vh;
+  .lateral-compacto{
+    display: none;
   }
+
 }
