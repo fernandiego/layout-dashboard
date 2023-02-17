@@ -6,12 +6,16 @@ import { NovoLayoutAreaDeTrabalhoComponent } from './novo-layout-area-de-trabalh
 import { AppRoutingModule } from './app-routing.module';
 import {RouterOutlet} from "@angular/router";
 
+import {ButtonModule} from 'primeng/button';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     NovoLayoutAreaDeTrabalhoComponent,
   ],
   imports: [
+    ButtonModule,
     BrowserModule,
     AppRoutingModule,
     RouterOutlet
