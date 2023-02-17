@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class NovoLayoutAreaDeTrabalhoComponent {
 
+
+  expandeOuComprime(divLateral: HTMLDivElement) {
+    if (divLateral.className === 'lateral-expandido') divLateral.className = 'lateral';
+    else  divLateral.className = 'lateral-expandido';
+  }
 }

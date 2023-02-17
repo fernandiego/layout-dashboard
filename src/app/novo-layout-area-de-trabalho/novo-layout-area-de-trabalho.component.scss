@@ -1,0 +1,93 @@
+.miolo, .lateral, .centro, .topo, .conteudo {
+  border: 1px solid red; /* debug */
+}
+
+.miolo {
+  display: flex;
+  min-height: 95vh;
+}
+
+.lateral, .lateral-expandido {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.lateral-expandido {
+  flex-grow: 6;
+}
+
+.centro {
+  flex-grow: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+.topo {
+  min-height: 3em;
+}
+
+.conteudo {
+  flex-grow: 1;
+}
+
+.lateral, .lateral-expandido {
+  a {
+    margin: 1em;
+    max-width: 100%;
+    background-image: url("/assets/images/logo_kanoe_curta.png");
+    background-size: contain;
+    min-width: 3em;
+    min-height: 3em;
+  }
+
+  button {
+    margin: 1em;
+    width:20px !important;
+    height: 20px;
+  }
+}
+
+.lateral-expandido {
+  a {
+    background-image: url("/assets/images/logo_kanoe.png");
+  }
+}
+
+@media (min-width: 1440px) {
+  .miolo {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  .lateral {
+    flex-grow: 4;
+  }
+}
+
+@media (min-width: 1280px) {
+  .miolo {
+    margin-left: 5em;
+    margin-right: 5em;
+  }
+  .lateral {
+    flex-grow: 3;
+  }
+}
+
+@media (max-width: 1024px) {
+  .lateral {
+    max-width: 6em;
+  }
+}
+
+@media (max-width: 800px) {
+  .lateral {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 40vw;
+    min-height: 100vh;
+  }
+}
